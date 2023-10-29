@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>HarmonyMind | Online Assessment</title>
+
+   <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
+  <!-- Icofont Css -->
+  <link rel="stylesheet" href="{% static 'plugins/icofont/icofont.min.css' %}">
+  <!-- Themify Css -->
+  <link rel="stylesheet" href="{% static 'plugins/themify/css/themify-icons.css' %}">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="{% static 'plugins/magnific-popup/dist/magnific-popup.css' %}">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+  <!-- Main Stylesheet -->
+  <!--<link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'style.css.map' %}"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <!-- <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script> -->
+
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- Include face-api.js from a CDN or your local static files. -->
+    <script src="{% static 'face-api.js' %}"></script>
+</head>
+<body>
+    
+<!-- Header Start -->
+<nav class="navbar navbar-expand-lg navigation bg-dark relative-top" id="navbar">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.html">
+			<h2 class="text-white text-capitalize"></i>HmarmonyMind<span class="text-color">.com</span></h2>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="ti-view-list"></span>
+		</button>
+		<div class="collapse text-center navbar-collapse" id="navbarsid">
+			<ul class="navbar-nav mx-auto">
+			
+			
+	</div>
+</nav>
+
+    
+<form action="{% url 'result' %}" method="POST" onsubmit="return validateAssessment();">
+{% csrf_token%}
+        <ol>
+            {% for question in questions %}
+            <li class="question">
+                <p>{{ question.question }}</p>
+                <ul>
+                    {% for option in question.options %}
+                    <li>
+                        <label class="radio-circle">
+                            <input type="radio" name="{{ question.id }}" value="{{ option.points }}">
+                            <span>{{ option.text }}</span>
+                        </label>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ol>
+
+        <div class="container">
+            <button type="submit" class="custom-button">Submit</button>
+            <button type="button" id="open-camera" class="custom-button">Open Camera</button>
+        </div>
+    </form>
+
+    <!-- Popup modal for camera stream -->
+    <!--<div class="modal" id="camera-modal">
+        <div class="modal-content">
+            <video id="camera-stream" autoplay playsinline></video>
+            <button type="button" id="close-camera" onclick="closeCamera()">Close Camera</button>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="640" height="480"></canvas>-->
+
+    <!-- Popup modal for camera stream -->
+    <div class="modal" id="camera-modal">
+        <div class="modal-content" style="width: 50%; height: auto;">
+            <video id="camera-stream" autoplay playsinline></video>
+            <button type="button" id="close-camera" onclick="closeCamera()">Close Camera</button>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="640" height="480"></canvas>
+
+
+
+    <script>
+        // Add an event listener to the form's submit event
+        document.querySelector('form').addEventListener('submit', function (event) {
+            var questions = document.querySelectorAll('.question');
+            var allAnswered = true;
+
+            for (var i = 0; i < questions.length; i++) {
+                var options = questions[i].querySelectorAll('input[type="radio"]');
+                var isAnswered = false;
+
+                for (var j = 0; j < options.length; j++) {
+                    if (options[j].checked) {
+                        isAnswered = true;
+                        break;
+                    }
+                }
+
+                if (!isAnswered) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+
+            // If not all questions are answered, prevent the form submission
+            if (!allAnswered) {
+                event.preventDefault();
+                alert('Please answer all questions before submitting.');
+            }
+        });
+
+        // camera
+        var videoStream; // To store the camera stream
+
+        function openCamera() {
+            var modal = document.getElementById('camera-modal');
+            modal.style.display = 'block';
+
+            navigator.mediaDevices
+                .getUserMedia({ video: true })
+                .then(function (stream) {
+                    var videoElement = document.getElementById('camera-stream');
+                    videoElement.srcObject = stream;
+                    videoStream = stream;
+                })
+                .catch(function (error) {
+                    console.error('Error accessing camera:', error);
+                    modal.style.display = 'none'; // Hide the modal in case of an error
+                });
+        }
+
+        function closeCamera() {
+            if (videoStream) {
+                var tracks = videoStream.getTracks();
+                tracks.forEach(function (track) {
+                    track.stop();
+                });
+
+                var modal = document.getElementById('camera-modal');
+                modal.style.display = 'none';
+
+                var videoElement = document.getElementById('camera-stream');
+                videoElement.srcObject = null;
+                videoStream = null;
+            }
+        }
+
+        // Add event listener to the "Open Camera" button
+        document.getElementById('open-camera').addEventListener('click', openCamera);
+    </script>
+</body>
+</html>

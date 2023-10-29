@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "question": "I have felt little interest or pleasure in doing things.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 2,
+        "question": "I have had trouble falling asleep, staying asleep, or sleeping too much.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 3,
+        "question": "I have felt tired or had little energy.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 4,
+        "question": "I have had a poor appetite or overeaten.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 5,
+        "question": "I have felt like a failure or let others down.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 6,
+        "question": "I have had trouble concentrating on things like reading or watching TV.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 7,
+        "question": "I have been moving or speaking so slowly that others could have noticed, or the opposite being so fidgety or restless that I have been moving around more than usual.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 8,
+        "question": "I have thoughts that I would be better off dead or of hurting myself in some way.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 9,
+        "question": "I have felt bad about myself or that I am a failure or have let myself or my family down.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 10,
+        "question": "I have had trouble concentrating on things like reading, watching TV, or conversations.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 11,
+        "question": "I have felt down, depressed, or hopeless.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 12,
+        "question": "I have had trouble falling asleep or staying asleep, or I have been sleeping too much.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 13,
+        "question": "I have had trouble making decisions or concentrating on things.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 14,
+        "question": "I have had changes in appetite or weight (not due to dieting).",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    },
+    {
+        "id": 15,
+        "question": "I have felt less confident in myself.",
+        "options": [
+            {"text": "Not at all", "points": 0},
+            {"text": "Several days", "points": 1},
+            {"text": "More than half the days", "points": 2},
+            {"text": "Nearly every day", "points": 3}
+        ]
+    }
+]

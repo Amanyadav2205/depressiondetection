@@ -1,0 +1,76 @@
+/* Style the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf0f0; /* Change the background color to black */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the assessment container */
+.assessment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #FF5733; /* Change the container background color to orange */
+}
+
+/* Style the assessment form */
+.assessment-form {
+    margin-top: 20px;
+}
+
+/* Style the assessment question and options */
+.question {
+    margin-bottom: 20px;
+}
+
+/* Style the options */
+.option {
+    margin-bottom: 10px;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style additional elements */
+h1 {
+    color: #007BFF; /* Change the h1 text color to blue */
+}
+
+/* Add more custom styles and colors as needed */
+
+/* Style the custom button */
+/* Center the button */
+.container {
+    text-align: center; /* Center-align the content horizontally */
+}
+
+.custom-button {
+    text-align: center;
+    background-color: #FF5733; /* Change the background color to orange */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 15px 30px; /* Adjust the padding to change the size */
+    cursor: pointer;
+    display: inline-block; /* Ensure the button respects the container's center alignment */
+}
+
+/* Style the custom tick mark for selected radio buttons */
+input[type="radio"]:checked + label::before {
+    content: '\2714'; /* Unicode character for a checkmark */
+    font-size: 30px !important; /* Increase the font size with !important */
+    color: #f5634b !important; /* Color for the selected option with !important */
+  }
+
+/* Style the navbar */
+.navbar {
+    background-color: #d6bcbc; /* Change the navbar background color to black */
+    color: #FF5733; /* Change the text color to orange */
+    padding: 10px 20px;
+}
+
+/* Modify other styles as needed */

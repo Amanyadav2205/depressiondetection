@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+   <title>Depression Assessment Result</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'result-styles.css' %}">
+
+
+
+   <style>
+    /* CSS styles for the result page */
+    * {
+        background-color: red;
+
+    }
+    .result-container {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .result-message {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #007BFF;
+    }
+
+    .suggestions {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    /* Add more custom styles here */
+</style>
+
+
+</head>
+   
+<body>
+    <div class="result-container">
+   <h1>Assessment Result</h1>
+   <p>You may be experiencing {{ level }} depression.</p>
+   <h2>Ways to Overcome Depression</h2>
+   <!-- Add suggestions and ways to overcome depression here based on the user's level -->
+   <p>Suggestions for overcoming depression:</p>
+   <ul>
+       <!-- <li> Seek professional help if needed.</li>
+       <li> Engage in physical activity.</li>
+       <li> Talk to friends and family for support.</li> -->
+       <li>Seek professional help if needed</li>
+       <li>Engage in physical activity.</li>
+       <li>Talk to friends and family for support.</li>
+   </ul>
+   <h2>Positive Quote</h2>
+   <p>If you're not experiencing depression, here's a positive quote:</p>
+   <p>"Insert positive quote here."</p>
+   </div>
+</body>
+</html>
